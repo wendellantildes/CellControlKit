@@ -53,6 +53,7 @@ class EntryTableViewCell: UITableViewCell {
     private func configureControls(){
         let label = UILabel()
         label.text = self.title
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = UIColor.black
         let textField = UITextField()
         textField.autocapitalizationType = UITextAutocapitalizationType.none

@@ -63,6 +63,7 @@ class StepperTableViewCell: UITableViewCell {
         let label = UILabel()
         label.text = self.title
         label.textColor = UIColor.black
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         let stepperValue = UILabel()
         stepperValueLabel?.text = ""
         stepperValue.textColor = UIColor.black
