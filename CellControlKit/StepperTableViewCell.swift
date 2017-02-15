@@ -43,16 +43,18 @@ class StepperTableViewCell: UITableViewCell {
     }
     
     func sizeToFitCustomControls(){
-        let bounds = self.contentView.bounds
         guard let label = self.stepperLabel, let stepperValueLabel = self.stepperValueLabel, let stepper = self.stepper else{
             return
         }
+        let bounds = self.contentView.bounds
+        let center = self.superview!.convert(self.center, to: self)
         label.sizeToFit()
-        label.frame.size.height = bounds.size.height
+        label.center = center
+        label.frame.origin.x = bounds.origin.x + self.leftMargin
         stepperValueLabel.sizeToFit()
-        stepperValueLabel.center = self.superview!.convert(self.center, to: self)
+        stepperValueLabel.center = center
         stepper.sizeToFit()
-        stepper.center = self.superview!.convert(self.center, to: self)
+        stepper.center = center
         stepper.frame.origin.x = bounds.size.width - stepper.frame.size.width - self.rightMargin
         
     }

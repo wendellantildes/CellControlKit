@@ -16,6 +16,7 @@ class EntryTableViewCell: UITableViewCell {
     
     let leftMargin : CGFloat = 10
     let rightMargin : CGFloat = 10
+    let distanceBetweenComponents : CGFloat = 10
     var entryLabel : UILabel?
     var textField : UITextField?
     
@@ -39,13 +40,14 @@ class EntryTableViewCell: UITableViewCell {
     }
     
     func sizeToFitCustomControls(){
-        let bounds = self.contentView.bounds
         guard let label = self.entryLabel, let textField = self.textField else{
             return
         }
+        let bounds = self.contentView.bounds
         label.sizeToFit()
-        label.frame.size.height = bounds.size.height
-        textField.frame = CGRect(x:label.frame.size.width + self.leftMargin, y: bounds.origin.y, width: bounds.size.width - label.frame.size.width - self.rightMargin, height: bounds.size.height)
+        label.center = self.superview!.convert(self.center, to: self)
+        label.frame.origin.x = bounds.origin.x + self.leftMargin
+        textField.frame = CGRect(x:label.frame.size.width + self.leftMargin + self.distanceBetweenComponents, y: bounds.origin.y, width: bounds.size.width - label.frame.size.width - self.rightMargin - self.leftMargin - self.distanceBetweenComponents, height: bounds.size.height)
     }
     
     private func configureControls(){

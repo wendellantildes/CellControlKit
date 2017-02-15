@@ -55,7 +55,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Beers"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Nome Completo"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="5"/>
+                                                <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                                 <real key="value" value="10"/>
