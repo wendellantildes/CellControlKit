@@ -9,15 +9,9 @@
 import UIKit
 
 @IBDesignable
-class EntryTableViewCell: UITableViewCell {
+class EntryTableViewCell: BaseTableViewCell {
     
     @IBInspectable var placeholder: String?
-    @IBInspectable var title : String?
-    
-    let leftMargin : CGFloat = 10
-    let rightMargin : CGFloat = 10
-    let distanceBetweenComponents : CGFloat = 10
-    var entryLabel : UILabel?
     var textField : UITextField?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -36,25 +30,15 @@ class EntryTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.sizeToFitCustomControls()
-    }
-    
-    func sizeToFitCustomControls(){
-        guard let label = self.entryLabel, let textField = self.textField else{
+        guard let label = self.titleLabel, let textField = self.textField else{
             return
         }
         let bounds = self.contentView.bounds
-        label.sizeToFit()
-        label.center = self.superview!.convert(self.center, to: self)
-        label.frame.origin.x = bounds.origin.x + self.leftMargin
         textField.frame = CGRect(x:label.frame.size.width + self.leftMargin + self.distanceBetweenComponents, y: bounds.origin.y, width: bounds.size.width - label.frame.size.width - self.rightMargin - self.leftMargin - self.distanceBetweenComponents, height: bounds.size.height)
     }
     
-    private func configureControls(){
-        let label = UILabel()
-        label.text = self.title
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.textColor = UIColor.black
+    override func configureControls(){
+        super.configureControls()
         let textField = UITextField()
         textField.autocapitalizationType = UITextAutocapitalizationType.none
         textField.autocorrectionType = UITextAutocorrectionType.no
@@ -64,9 +48,7 @@ class EntryTableViewCell: UITableViewCell {
         textField.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         textField.textAlignment = .right
         textField.placeholder = self.placeholder
-        self.contentView.addSubview(label)
         self.contentView.addSubview(textField)
-        self.entryLabel = label
         self.textField = textField
         self.selectionStyle = UITableViewCellSelectionStyle.none
     }
