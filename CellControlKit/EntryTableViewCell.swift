@@ -16,7 +16,6 @@ class EntryTableViewCell: BaseTableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.configureControls()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -25,7 +24,6 @@ class EntryTableViewCell: BaseTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.configureControls()
     }
     
     override func layoutSubviews() {
@@ -50,7 +48,6 @@ class EntryTableViewCell: BaseTableViewCell {
         textField.placeholder = self.placeholder
         self.contentView.addSubview(textField)
         self.textField = textField
-        self.selectionStyle = UITableViewCellSelectionStyle.none
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
