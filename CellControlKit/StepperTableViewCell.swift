@@ -60,7 +60,6 @@ class StepperTableViewCell: BaseTableViewCell {
         self.contentView.addSubview(stepper)
         self.stepperValueLabel = stepperValue
         self.stepper = stepper
-      //  self.selectionStyle = UITableViewCellSelectionStyle.none
         self.setStepperValueLabel()
     }
     
