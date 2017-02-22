@@ -10,12 +10,6 @@ import UIKit
 
 class DatePickerTextFieldDelegate: NSObject, UITextFieldDelegate {
 
-    let cell : DatePickerTableViewCell!
-    
-    init(_ cell : DatePickerTableViewCell) {
-        self.cell = cell
-    }
-
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         let toolbar = UIToolbar()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: textField, action: #selector(UITextField.resignFirstResponder))

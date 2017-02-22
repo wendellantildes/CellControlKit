@@ -11,7 +11,6 @@
 		B7BA43641E5A495900A69754 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA43631E5A495900A69754 /* DatePickerTableViewCell.swift */; };
 		B7C874791E550AE6000EFE03 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C874781E550AE6000EFE03 /* BaseTableViewCell.swift */; };
 		B7F48CF81E50FD5E007EC979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F48CF71E50FD5E007EC979 /* AppDelegate.swift */; };
-		B7F48CFA1E50FD5E007EC979 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F48CF91E50FD5E007EC979 /* ViewController.swift */; };
 		B7F48CFD1E50FD5E007EC979 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F48CFB1E50FD5E007EC979 /* Main.storyboard */; };
 		B7F48CFF1E50FD5E007EC979 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F48CFE1E50FD5E007EC979 /* Assets.xcassets */; };
 		B7F48D021E50FD5E007EC979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F48D001E50FD5E007EC979 /* LaunchScreen.storyboard */; };
@@ -26,7 +25,6 @@
 		B7C874781E550AE6000EFE03 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		B7F48CF41E50FD5E007EC979 /* CellControlKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellControlKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F48CF71E50FD5E007EC979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7F48CF91E50FD5E007EC979 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7F48CFC1E50FD5E007EC979 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7F48CFE1E50FD5E007EC979 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F48D011E50FD5E007EC979 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				B7F48D0A1E50FDDE007EC979 /* MainViewController.swift */,
 				B7F48D0B1E50FDDE007EC979 /* StepperTableViewCell.swift */,
 				B7F48CF71E50FD5E007EC979 /* AppDelegate.swift */,
-				B7F48CF91E50FD5E007EC979 /* ViewController.swift */,
 				B7F48CFB1E50FD5E007EC979 /* Main.storyboard */,
 				B7F48CFE1E50FD5E007EC979 /* Assets.xcassets */,
 				B7F48D001E50FD5E007EC979 /* LaunchScreen.storyboard */,
@@ -156,7 +153,6 @@
 			files = (
 				B7922E741E5D0F3C00CBE809 /* DatePickerTextFieldDelegate.swift in Sources */,
 				B7F48D0C1E50FDDE007EC979 /* EntryTableViewCell.swift in Sources */,
-				B7F48CFA1E50FD5E007EC979 /* ViewController.swift in Sources */,
 				B7F48D0E1E50FDDE007EC979 /* StepperTableViewCell.swift in Sources */,
 				B7F48CF81E50FD5E007EC979 /* AppDelegate.swift in Sources */,
 				B7C874791E550AE6000EFE03 /* BaseTableViewCell.swift in Sources */,

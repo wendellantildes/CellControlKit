@@ -44,8 +44,8 @@ class StepperTableViewCell: BaseTableViewCell {
         stepper.frame.origin.x = bounds.size.width - stepper.frame.size.width - self.rightMargin
     }
     
-     override func configureControls(){
-        super.configureControls()
+     override func setupControls(){
+        super.setupControls()
         let stepperValue = UILabel()
         stepperValueLabel?.text = ""
         stepperValue.textColor = UIColor.black
@@ -68,7 +68,7 @@ class StepperTableViewCell: BaseTableViewCell {
     }
     
     override func prepareForInterfaceBuilder() {
-        self.configureControls()
+        self.setupControls()
     }
     
     func stepperValueChanged(stepper : UIStepper){

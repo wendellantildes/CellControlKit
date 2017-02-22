@@ -35,8 +35,8 @@ class EntryTableViewCell: BaseTableViewCell {
         textField.frame = CGRect(x:label.frame.size.width + self.leftMargin + self.distanceBetweenComponents, y: bounds.origin.y, width: bounds.size.width - label.frame.size.width - self.rightMargin - self.leftMargin - self.distanceBetweenComponents, height: bounds.size.height)
     }
     
-    override func configureControls(){
-        super.configureControls()
+    override func setupControls(){
+        super.setupControls()
         let textField = UITextField()
         textField.autocapitalizationType = UITextAutocapitalizationType.none
         textField.autocorrectionType = UITextAutocorrectionType.no
@@ -55,7 +55,7 @@ class EntryTableViewCell: BaseTableViewCell {
     }
     
     override func prepareForInterfaceBuilder() {
-        self.configureControls()
+        self.setupControls()
     }
 
 }

@@ -20,18 +20,7 @@ class DatePickerTableViewCell: BaseTableViewCell {
     }
     
     private var textField  = UITextField()
-    var textFieldDelegate : DatePickerTextFieldDelegate!
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.textFieldDelegate = DatePickerTextFieldDelegate(self)
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.textFieldDelegate = DatePickerTextFieldDelegate(self)
-    }
+    let textFieldDelegate = DatePickerTextFieldDelegate()
     
     
     override func awakeFromNib() {
@@ -53,8 +42,8 @@ class DatePickerTableViewCell: BaseTableViewCell {
         self.textField.frame = CGRect(x:label.frame.size.width + self.leftMargin + self.distanceBetweenComponents, y: bounds.origin.y, width: bounds.size.width - label.frame.size.width - self.rightMargin - self.leftMargin - self.distanceBetweenComponents, height: bounds.size.height)
     }
     
-    override func configureControls() {
-        super.configureControls()
+    override func setupControls() {
+        super.setupControls()
         let textField = UITextField()
         textField.autocapitalizationType = UITextAutocapitalizationType.none
         textField.autocorrectionType = UITextAutocorrectionType.no

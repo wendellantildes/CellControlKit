@@ -20,7 +20,7 @@ class BaseTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.configureControls()
+        self.setupControls()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +29,7 @@ class BaseTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.configureControls()
+        self.setupControls()
     }
     
     override func layoutSubviews() {
@@ -43,7 +43,7 @@ class BaseTableViewCell: UITableViewCell {
         label.frame.origin.x = bounds.origin.x + self.leftMargin
     }
     
-    func configureControls(){
+    func setupControls(){
         let label = UILabel()
         label.text = self.title
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -62,6 +62,6 @@ class BaseTableViewCell: UITableViewCell {
     }
     
     override func prepareForInterfaceBuilder() {
-        self.configureControls()
+        self.setupControls()
     }
 }
