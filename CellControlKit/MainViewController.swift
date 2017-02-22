@@ -10,8 +10,14 @@ import UIKit
 
 class MainViewController: UITableViewController {
 
+    @IBOutlet var purchaseDatePicker: DatePickerTableViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let datePicker = UIDatePicker()
+        datePicker.maximumDate = Date()
+        datePicker.datePickerMode = .date
+        self.purchaseDatePicker.datePicker = datePicker
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +33,6 @@ class MainViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
 }
